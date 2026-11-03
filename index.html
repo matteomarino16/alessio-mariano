@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alessio Mariano — Director / Photographer</title>
+  <meta name="description" content="Alessio Mariano — Director e Photographer. Portfolio 2026.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="intro">
+
+  <!-- Video di sfondo -->
+  <div class="intro-bg">
+    <video autoplay muted loop playsinline preload="auto">
+      <source src="progetti/video/intro.mp4" type="video/mp4">
+      <source src="https://res.cloudinary.com/o40vc5qd/video/upload/q_auto/f_auto/br_1800k/w_720/fantasma03.mov">
+    </video>
+  </div>
+
+  <!-- Effetti VHS -->
+  <div class="vhs-scanlines"></div>
+  <div class="vhs-noise"></div>
+  <div class="vhs-vignette"></div>
+
+  <!-- HUD angoli -->
+  <div class="hud hud-tl"><span class="rec-dot"></span>REC</div>
+  <div class="hud hud-tr" id="timecode">00:00:00:00</div>
+  <div class="hud hud-bl">PLAY ▶ SP<br><span id="vhs-date">—</span></div>
+  <div class="hud hud-br">IT ◉ 40°N<br>CH 03</div>
+
+  <main class="intro-content">
+    <h1 class="intro-title">
+      <span>ALESSIO</span>
+      <span>MARIANO</span>
+    </h1>
+
+    <p class="intro-sub">Director \ Photographer</p>
+
+    <a href="home.html" class="btn-enter" id="enter">Entra</a>
+
+    <footer class="intro-footer">
+      <p>Web by Matteo Marino</p>
+    </footer>
+  </main>
+
+  <div class="transition" id="transition"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
