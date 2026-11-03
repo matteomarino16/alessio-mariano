@@ -131,9 +131,9 @@ body.intro {
 .hud-tl::before { top: 0; left: 0; border-top-width: 2px; border-left-width: 2px; }
 .hud-tr { top: var(--gutter); right: var(--gutter); text-align: right; }
 .hud-tr::before { top: 0; right: 0; border-top-width: 2px; border-right-width: 2px; }
-.hud-bl { bottom: var(--gutter); left: var(--gutter); }
+.hud-bl { bottom: var(--gutter); left: var(--gutter); padding-bottom: 0; }
 .hud-bl::before { bottom: 0; left: 0; border-bottom-width: 2px; border-left-width: 2px; }
-.hud-br { bottom: var(--gutter); right: var(--gutter); text-align: right; }
+.hud-br { bottom: var(--gutter); right: var(--gutter); text-align: right; padding-bottom: 0; }
 .hud-br::before { bottom: 0; right: 0; border-bottom-width: 2px; border-right-width: 2px; }
 
 .rec-dot {
@@ -217,11 +217,18 @@ body.intro {
 }
 
 .intro-footer {
-  font-size: 11px;
-  letter-spacing: 0.25em;
+  position: fixed;
+  left: 50%;
+  /* stessa riga degli angoli in basso e delle scritte NOV. / CH 03 */
+  bottom: var(--gutter);
+  z-index: 10;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: clamp(11px, 1.1vw, 15px);
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 .intro-footer a:hover { color: var(--fg); }
 
@@ -482,6 +489,9 @@ body.home {
   .hud::before { width: 18px; height: 18px; }
   .intro-sub { letter-spacing: 0.25em; line-height: 1.8; }
   .btn-enter { min-width: 180px; padding: 18px 36px; }
+  /* su mobile alzo gli angoli in basso per lasciare il credit sul bordo */
+  .hud-bl, .hud-br { bottom: calc(var(--gutter) + 22px); }
+  .intro-footer { bottom: 14px; }
 
   .site-header { align-items: flex-start; }
   .site-nav { gap: 14px; font-size: 12px; }
